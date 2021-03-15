@@ -7,7 +7,7 @@
 
         {
             "name": "mobile-app",
-            "program": "lib/splashscreen.dart",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart"
         }

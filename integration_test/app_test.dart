@@ -9,15 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
-import 'package:patiprecios_flutter/main.dart' as app;
-import 'package:patiprecios_flutter/splashscreen.dart' as app2;
-
-
+import 'package:patiprecios_flutter/main_old.dart' as app;
+import 'package:patiprecios_flutter/main.dart' as app2;
 
 void main() => run(_testMain);
 
-run(void Function() testMain) {
-}
+run(void Function() testMain) {}
 
 void _testMain() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
