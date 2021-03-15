@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:patiprecios_flutter/src/pages/home_page.dart';
+import 'package:patiprecios_flutter/src/pages/welcome_page.dart';
 
 class SplashScreenPage extends StatefulWidget {
   @override
@@ -34,6 +35,6 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+            context, MaterialPageRoute(builder: (context) => WelcomePage())));
   }
 }

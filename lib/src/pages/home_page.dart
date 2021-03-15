@@ -35,7 +35,10 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            icon: Icon(Icons.location_on),
+            icon: Icon(
+              Icons.location_on,
+              color: Colors.pink,
+            ),
             onPressed: () {},
           ),
           IconButton(
