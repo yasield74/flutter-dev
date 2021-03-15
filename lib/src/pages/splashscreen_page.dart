@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:patiprecios_flutter/src/pages/home_page.dart';
-import 'package:patiprecios_flutter/src/pages/navbar.dart' as navbar;
 
 class SplashScreenPage extends StatefulWidget {
   @override

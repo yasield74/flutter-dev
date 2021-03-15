@@ -18,6 +18,16 @@ class MyApp extends StatelessWidget {
         initialRoute: 'splashscreen',
         routes: getApplicationRoutes(),
         title: 'Material App',
+        theme: ThemeData(
+            primaryColor: Colors.black,
+            accentColor: Colors.black,
+            appBarTheme: AppBarTheme(
+                iconTheme: IconThemeData(color: Colors.black),
+                textTheme: TextTheme(
+                    headline6: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold)))),
       ),
     );
   }

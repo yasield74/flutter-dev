@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/pages/cerca_page.dart';
+import 'package:patiprecios_flutter/src/pages/favorites_page.dart';
+
 import 'package:patiprecios_flutter/src/pages/group_page.dart';
 import 'package:patiprecios_flutter/src/pages/location_page.dart';
-import 'package:patiprecios_flutter/src/pages/mas_vendidos_page.dart';
 import 'package:patiprecios_flutter/src/pages/search_search.dart';
 import 'package:patiprecios_flutter/src/pages/settings_page.dart';
-import 'package:patiprecios_flutter/src/pages/sugerencias_page.dart';
 import 'package:patiprecios_flutter/src/providers/ui_provider.dart';
 import 'package:patiprecios_flutter/src/widget/bottom_navigation_widget.dart';
 import 'package:patiprecios_flutter/src/widget/custom_drawer_widget.dart';
@@ -14,40 +13,39 @@ import 'package:provider/provider.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final uiProvider = Provider.of<UiProvider>(context);
-
-    return DefaultTabController(
-      initialIndex: uiProvider.selectedTabBarObt,
-      length: 3,
-      child: Scaffold(
-        drawer: CustomDrawer(),
-        appBar: AppBar(
-          title: Text('Hola'),
-          leading: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/photo_female_1.jpg'),
-          ),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                text: 'CERCA DE TI',
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 70.0,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Container(
+          padding: EdgeInsets.only(left: 15.0),
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundImage: AssetImage('assets/images/photo_female_1.jpg'),
               ),
-              Tab(
-                text: 'SUGERENCIAS',
+              SizedBox(
+                width: 10.0,
               ),
-              Tab(
-                text: 'LO MAS VENDIDO',
-              )
+              Text('Hola')
             ],
-            onTap: (val) {
-              uiProvider.selectedTabBarObt = val;
-              uiProvider.selectedBottomAppbarOpt = 0;
-              uiProvider.flag = 1;
-            },
           ),
         ),
-        body: _HomePageBody(),
-        bottomNavigationBar: CustomBottomNavigationBar(),
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.location_on),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.notifications_active_outlined),
+            onPressed: () {},
+          ),
+        ],
       ),
+      body: _HomePageBody(),
+      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
@@ -61,36 +59,27 @@ class _HomePageBody extends StatelessWidget {
     final uiProvider = Provider.of<UiProvider>(context);
 
     //cambiar para mostrar la pagina respectiva
-    final currenIndexBottom = uiProvider.selectedBottomAppbarOpt;
-    final currenIndexTab = uiProvider.selectedTabBarObt;
-    final flag = uiProvider.flag;
+    final currenIndexBottomBar = uiProvider.selectedBottomAppbarOpt;
 
-    if (flag == 0) {
-      switch (currenIndexBottom) {
-        case 0:
-          return LocationFragment();
-        case 1:
-          return SearchFragment();
-        case 2:
-          return LocationFragment();
-        case 3:
-          return GroupFragment();
-        case 4:
-          return SettingFragment();
-        default:
-          return LocationFragment();
-      }
-    } else {
-      switch (currenIndexTab) {
-        case 0:
-          return CercaPage();
-        case 1:
-          return SugerenciasPage();
-        case 2:
-          return MasVendidosPage();
-        default:
-          return CercaPage();
-      }
+    switch (currenIndexBottomBar) {
+      case 0:
+        return LocationFragment();
+        break;
+      case 1:
+        return SearchFragment();
+        break;
+      case 2:
+        return FavoritesPage();
+        break;
+      case 3:
+        return GroupFragment();
+        break;
+      case 4:
+        return SettingFragment();
+        break;
+      default:
+        return LocationFragment();
+        break;
     }
   }
 }

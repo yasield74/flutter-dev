@@ -33,8 +33,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
       ],
       onTap: (index) {
         uiProvider.selectedBottomAppbarOpt = index;
-        uiProvider.selectedTabBarObt = 0;
-        uiProvider.flag = 0;
       },
     );
   }

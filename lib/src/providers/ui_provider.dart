@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class UiProvider extends ChangeNotifier {
   int _selectedBottomAppbarOpt = 0;
-  int _selectedTabBarObt = 0;
-  int _flag = 0;
+  int _tabIndex = 0;
 
   int get selectedBottomAppbarOpt {
     return this._selectedBottomAppbarOpt;
@@ -14,21 +13,12 @@ class UiProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  int get selectedTabBarObt {
-    return this._selectedTabBarObt;
+  int get selectedTabIndex {
+    return this._tabIndex;
   }
 
-  set selectedTabBarObt(int val) {
-    this._selectedTabBarObt = val;
-    notifyListeners();
-  }
-
-  int get flag {
-    return this._flag;
-  }
-
-  set flag(int val) {
-    this._flag = val;
+  set selectedTabIndex(int val) {
+    this._tabIndex = val;
     notifyListeners();
   }
 }
