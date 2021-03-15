@@ -10,21 +10,21 @@ class PublicacionPage extends StatefulWidget {
 class _PublicacionPageState extends State<PublicacionPage> {
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
+    final size = MediaQuery.of(context).size;
     return Scaffold(
         body: Stack(
       children: [
-        _fondo(),
-        _imagenPublicacion(context, height),
-        _nombrePublicacion(height),
-        _publicacion(height)
+        _fondo(size),
+        _imagenPublicacion(context, size),
+        _nombrePublicacion(size),
+        _publicacion(size)
       ],
     ));
   }
 
-  Widget _imagenPublicacion(BuildContext context, double height) {
+  Widget _imagenPublicacion(BuildContext context, Size size) {
     return Container(
-      height: height * 0.45,
+      height: size.height * 0.45,
       child: Image(
         fit: BoxFit.cover,
         image: AssetImage('assets/images/image_21.jpg'),
@@ -32,9 +32,9 @@ class _PublicacionPageState extends State<PublicacionPage> {
     );
   }
 
-  Widget _nombrePublicacion(double height) {
+  Widget _nombrePublicacion(Size size) {
     return Positioned(
-      top: height * 0.30,
+      top: size.height * 0.30,
       child: Container(
         padding: EdgeInsets.only(left: 20.0),
         child: Column(
@@ -63,30 +63,149 @@ class _PublicacionPageState extends State<PublicacionPage> {
     );
   }
 
-  Widget _fondo() {
+  Widget _fondo(Size size) {
     return Container(
-      height: double.infinity,
-      width: double.infinity,
+      height: size.height,
+      width: size.width,
     );
   }
 
-  //TODO: Terminar implementacion aqui
-
-  Widget _publicacion(double height) {
+  Widget _publicacion(Size size) {
     return Positioned(
-        top: height * 0.4,
-        child: Container(
-          color: Colors.red,
-          child: Column(
-            children: [
-              Text('Dest data'),
-              Text('Dest data'),
-              Text('Dest data'),
-              Text('Dest data'),
-              Text('Dest data'),
-              Text('Dest data'),
-            ],
+        top: size.height * 0.4,
+        child: SingleChildScrollView(
+          child: Container(
+            width: size.width,
+            padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 25.0),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(20.0)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: iterationsIcons(),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Descripción',
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      '99.99',
+                      style: TextStyle(color: Colors.grey, fontSize: 40.0),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                    'Ea nostrud ea sint Lorem. Minim voluptate quis qui et consectetur duis ea velit nostrud duis dolore reprehenderit voluptate. Culpa proident est excepteur laborum tempor cupidatat sit cupidatat anim non id.',
+                    style: TextStyle(color: Colors.grey, fontSize: 16.0)),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  'Ubicación',
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  'Florida Región Metropolitana',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 20.0,
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  'Mapa',
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Image(
+                    image: AssetImage('assets/images/photo_male_5.jpg'),
+                  ),
+                )
+              ],
+            ),
           ),
         ));
+  }
+
+  Widget iterationsIcons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            _iconSet(Icons.favorite, Colors.red, 100),
+            SizedBox(
+              width: 10.0,
+            ),
+            _iconSet(Icons.stars, Colors.yellow, 100),
+            SizedBox(
+              width: 10.0,
+            ),
+            _iconSet(Icons.stars, Colors.yellow, 100),
+            SizedBox(
+              width: 10.0,
+            ),
+            _iconSet(Icons.stars, Colors.yellow, 100),
+            SizedBox(
+              width: 10.0,
+            ),
+            _iconSet(Icons.thumb_down, Colors.brown, 100),
+          ],
+        ),
+        Row(
+          children: [
+            _iconSet(Icons.speaker_notes, Colors.blue, 100),
+            SizedBox(
+              width: 10.0,
+            ),
+            _iconSet(Icons.send, Colors.orange, 100),
+          ],
+        )
+      ],
+    );
+  }
+
+  Widget _iconSet(IconData icon, Color color, int value) {
+    return Column(
+      children: [
+        Icon(
+          icon,
+          color: color,
+        ),
+        SizedBox(
+          height: 10.0,
+        ),
+        Text('$value'),
+      ],
+    );
   }
 }
