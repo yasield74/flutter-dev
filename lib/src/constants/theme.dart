@@ -1,6 +1,13 @@
-import 'package:flutter/material.dart';
+import 'dart:ui';
 
-class MyColors {
+class PatiColors {
+  static const Color orange = Color.fromRGBO(255, 174, 0, 1);
+
+  static const Color red = Color.fromRGBO(255, 0, 98, 1);
+
+  static const Color aqua = Color.fromRGBO(104, 82, 0, 1);
+
+  static const Color darkBlue = Color.fromRGBO(32, 32, 96, 1);
 
   static const Color primary = Color(0xFF1976D2);
   static const Color primaryDark = Color(0xFF1565C0);
@@ -19,6 +26,4 @@ class MyColors {
   static const Color grey_90 = Color(0xFF263238);
   static const Color grey_95 = Color(0xFF1a1a1a);
   static const Color grey_100_ = Color(0xFF0d0d0d);
-
-
 }

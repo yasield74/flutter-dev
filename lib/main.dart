@@ -15,12 +15,13 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: 'publication',
+        initialRoute: 'splashscreen',
         routes: getApplicationRoutes(),
         title: 'Material App',
         theme: ThemeData(
             primaryColor: Colors.black,
             accentColor: Colors.black,
+            fontFamily: 'Varela Round',
             appBarTheme: AppBarTheme(
                 iconTheme: IconThemeData(color: Colors.black),
                 textTheme: TextTheme(

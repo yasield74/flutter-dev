@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patiprecios_flutter/src/constants/theme.dart';
 
 import 'home_page.dart';
 
@@ -18,7 +19,7 @@ class WelcomePage extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      color: Color.fromRGBO(32, 31, 97, 1),
+      color: PatiColors.darkBlue,
     );
   }
 
@@ -41,8 +42,11 @@ class WelcomePage extends StatelessWidget {
               height: 20.0,
             ),
             Text(
-              'Bienvenido a Patiprecios, la aplicación para comprar más rápida y eficaz',
-              style: TextStyle(color: Colors.white, fontSize: 20.0),
+              'Bienvenidos a Patiprecios, la aplicación para comprar más rápida y eficaz',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  fontFamily: 'Montserrat'),
               textAlign: TextAlign.left,
             ),
             SizedBox(
@@ -52,12 +56,15 @@ class WelcomePage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
-                      color: Colors.orange[300]),
+                      color: PatiColors.orange),
                   child: Container(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
                         'Comencemos',
-                        style: TextStyle(color: Colors.black, fontSize: 20.0),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20.0,
+                            fontFamily: 'Varela Round'),
                       )),
                 ),
                 onPressed: () {

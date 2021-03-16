@@ -57,14 +57,23 @@ class ComunidadesPage extends StatelessWidget {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Descripción de la comunidad'),
+                        Text(
+                          'Descripción de la comunidad ',
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         Row(
                           children: [
-                            Text('99 Miembros'),
+                            Text(
+                              '99 Miembros',
+                              style: TextStyle(fontSize: 12),
+                            ),
                             SizedBox(
                               width: 10.0,
                             ),
-                            Text('100 publicaciones')
+                            Text(
+                              '100 publicaciones',
+                              style: TextStyle(fontSize: 12),
+                            )
                           ],
                         )
                       ],
