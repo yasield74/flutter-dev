@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios_flutter/src/pages/favorites_page.dart';
 
-import 'package:patiprecios_flutter/src/pages/group_page.dart';
+import 'package:patiprecios_flutter/src/pages/comunidades_page.dart';
 import 'package:patiprecios_flutter/src/pages/location_page.dart';
 import 'package:patiprecios_flutter/src/pages/search_search.dart';
 import 'package:patiprecios_flutter/src/pages/settings_page.dart';
@@ -75,7 +75,7 @@ class _HomePageBody extends StatelessWidget {
         return FavoritesPage();
         break;
       case 3:
-        return GroupFragment();
+        return ComunidadesPage();
         break;
       case 4:
         return SettingFragment();
