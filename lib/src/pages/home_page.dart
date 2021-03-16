@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios_flutter/src/pages/favorites_page.dart';
 
-import 'package:patiprecios_flutter/src/pages/comunidades_page.dart';
+import 'package:patiprecios_flutter/src/pages/communities_page.dart';
 import 'package:patiprecios_flutter/src/pages/location_page.dart';
 import 'package:patiprecios_flutter/src/pages/search_search.dart';
 import 'package:patiprecios_flutter/src/pages/settings_page.dart';
