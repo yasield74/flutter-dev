@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/pages/nearby_page.dart';
-import 'package:patiprecios_flutter/src/pages/best_sellers_page.dart';
-import 'package:patiprecios_flutter/src/pages/suggestions_page.dart';
+import 'package:patiprecios/src/pages/nearby_page.dart';
+import 'package:patiprecios/src/pages/best_sellers_page.dart';
+import 'package:patiprecios/src/pages/suggestions_page.dart';
 
 class LocationFragment extends StatefulWidget {
   @override

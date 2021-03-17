@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:patiprecios_flutter/src/pages/home_page.dart';
-import 'package:patiprecios_flutter/src/pages/welcome_page.dart';
+import 'package:patiprecios/src/pages/home_page.dart';
+import 'package:patiprecios/src/pages/welcome_page.dart';
 
 class SplashScreenPage extends StatefulWidget {
   @override

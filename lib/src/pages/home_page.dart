@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/pages/favorites_page.dart';
-
-import 'package:patiprecios_flutter/src/pages/communities_page.dart';
-import 'package:patiprecios_flutter/src/pages/location_page.dart';
-import 'package:patiprecios_flutter/src/pages/search_search.dart';
-import 'package:patiprecios_flutter/src/pages/settings_page.dart';
-import 'package:patiprecios_flutter/src/providers/ui_provider.dart';
-import 'package:patiprecios_flutter/src/widget/bottom_navigation_widget.dart';
+import 'package:patiprecios/src/pages/favorites_page.dart';
+import 'package:patiprecios/src/pages/communities_page.dart';
+import 'package:patiprecios/src/pages/location_page.dart';
+import 'package:patiprecios/src/pages/search_search.dart';
+import 'package:patiprecios/src/pages/settings_page.dart';
+import 'package:patiprecios/src/providers/ui_provider.dart';
+import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {

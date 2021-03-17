@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:patiprecios_flutter/src/model/notif.dart';
+import 'package:patiprecios/src/model/notif.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 

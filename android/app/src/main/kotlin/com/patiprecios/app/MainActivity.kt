@@ -1,4 +1,4 @@
-package com.example.patiprecios_flutter
+package com.patiprecios.app
 
 import io.flutter.embedding.android.FlutterActivity
 

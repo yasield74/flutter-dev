@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/providers/ui_provider.dart';
+import 'package:patiprecios/src/providers/ui_provider.dart';
 import 'package:provider/provider.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
@@ -17,7 +17,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
-    final uiProvider = Provider.of<UiProvider>(context);
+    Provider.of<UiProvider>(context);
 
     return AppBar(
       title: Text('Holaaa'),

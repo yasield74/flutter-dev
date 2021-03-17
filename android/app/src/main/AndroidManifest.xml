@@ -1,8 +1,9 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.patiprecios_flutter">
-   <application
-        android:label="patiprecios_flutter"
-        android:icon="@mipmap/launcher_icon">
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.patiprecios.app">
+    <application
+            android:label="Patiprecios"
+            android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
