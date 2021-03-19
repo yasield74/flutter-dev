@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:patiprecios_flutter/src/pages/community_page.dart';
 import 'package:patiprecios_flutter/src/pages/home_page.dart';
 import 'package:patiprecios_flutter/src/pages/publication_page.dart';
 import 'package:patiprecios_flutter/src/pages/splashscreen_page.dart';
@@ -10,5 +11,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'welcome': (BuildContext context) => WelcomePage(),
     'home': (BuildContext context) => HomePage(),
     'publication': (BuildContext context) => PublicacionPage(),
+    'community': (BuildContext context) => CommunityPage(),
   };
 }
