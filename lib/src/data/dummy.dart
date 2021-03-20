@@ -10,7 +10,6 @@ import 'package:patiprecios_flutter/src/model/people.dart';
 import 'package:patiprecios_flutter/src/model/shop_category.dart';
 import 'package:patiprecios_flutter/src/model/shop_product.dart';
 import 'package:patiprecios_flutter/src/model/wizard.dart';
-import 'package:path/path.dart';
 
 import 'img.dart';
 
