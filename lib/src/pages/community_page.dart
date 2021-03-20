@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios_flutter/src/constants/theme.dart';
+import 'package:patiprecios_flutter/src/widget/bottom_navigation_widget.dart';
 
 class CommunityPage extends StatelessWidget {
   const CommunityPage({Key key}) : super(key: key);
@@ -8,13 +9,20 @@ class CommunityPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-        body: Stack(
-      children: [
-        background(context, size),
-        _content(context, size),
-        _avatar(context, size)
-      ],
-    ));
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: PatiColors.primaryDark,
+        elevation: 0,
+      ),
+      body: Stack(
+        children: [
+          background(context, size),
+          _content(context, size),
+          _avatar(context, size)
+        ],
+      ),
+      bottomNavigationBar: CustomBottomNavigationBar(),
+    );
   }
 
   Widget background(BuildContext context, Size size) {

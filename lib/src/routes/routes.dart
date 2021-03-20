@@ -7,7 +7,7 @@ import 'package:patiprecios_flutter/src/pages/welcome_page.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes() {
   return <String, WidgetBuilder>{
-    'splashscreen': (BuildContext context) => SplashScreenPage(),
+    'splashpage': (BuildContext context) => SplashScreenPage(),
     'welcome': (BuildContext context) => WelcomePage(),
     'home': (BuildContext context) => HomePage(),
     'publication': (BuildContext context) => PublicacionPage(),
