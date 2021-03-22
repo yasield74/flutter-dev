@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/constants/theme.dart';
-import 'package:patiprecios_flutter/src/widget/bottom_navigation_widget.dart';
+import 'package:patiprecios/src/constants/theme.dart';
+import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 
 class CommunityPage extends StatelessWidget {
   const CommunityPage({Key key}) : super(key: key);
