@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
             primaryColor: Colors.black,
             accentColor: Colors.black,
-            fontFamily: 'Varela Round',
+            fontFamily: 'VarelaRound',
             appBarTheme: AppBarTheme(
                 iconTheme: IconThemeData(color: Colors.black),
                 textTheme: TextTheme(

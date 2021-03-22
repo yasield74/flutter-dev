@@ -8,35 +8,34 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Stack(
-        children: [_colorFondo(), _OtrosElementos(context)],
+        children: [_colorFondo(size), _OtrosElementos(context, size)],
       ),
     );
   }
 
-  Widget _colorFondo() {
+  Widget _colorFondo(Size size) {
     return Container(
-      width: double.infinity,
-      height: double.infinity,
+      width: size.width,
+      height: size.height,
       color: PatiColors.darkBlue,
     );
   }
 
-  Widget _OtrosElementos(BuildContext context) {
-    final heigt = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+  Widget _OtrosElementos(BuildContext context, Size size) {
     return Positioned(
-      top: heigt * 0.3,
       child: Container(
-        width: width * 0.7,
-        padding: EdgeInsets.only(left: 40.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Expanded(child: Container()),
             Container(
-                width: 350.0,
-                height: 350.0,
+                width: 320.0,
+                height: 320.0,
                 child: Image(image: AssetImage('assets/patiprecios_icon.jpg'))),
             SizedBox(
               height: 20.0,
