@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/providers/ui_provider.dart';
+import 'package:patiprecios/src/providers/ui_provider.dart';
 import 'package:provider/provider.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {

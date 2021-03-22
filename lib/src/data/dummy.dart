@@ -2,14 +2,15 @@
 import 'package:flutter/cupertino.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/model/image_obj.dart';
-import 'package:patiprecios_flutter/src/model/model_image.dart';
-import 'package:patiprecios_flutter/src/model/music_song.dart';
-import 'package:patiprecios_flutter/src/model/news.dart';
-import 'package:patiprecios_flutter/src/model/people.dart';
-import 'package:patiprecios_flutter/src/model/shop_category.dart';
-import 'package:patiprecios_flutter/src/model/shop_product.dart';
-import 'package:patiprecios_flutter/src/model/wizard.dart';
+import 'package:patiprecios/src/model/image_obj.dart';
+import 'package:patiprecios/src/model/model_image.dart';
+import 'package:patiprecios/src/model/music_song.dart';
+import 'package:patiprecios/src/model/news.dart';
+import 'package:patiprecios/src/model/people.dart';
+import 'package:patiprecios/src/model/shop_category.dart';
+import 'package:patiprecios/src/model/shop_product.dart';
+import 'package:patiprecios/src/model/wizard.dart';
+import 'package:path/path.dart';
 
 import 'img.dart';
 

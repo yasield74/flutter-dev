@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/routes/routes.dart';
+import 'package:patiprecios/src/routes/routes.dart';
 import 'package:provider/provider.dart';
 
 import 'src/providers/ui_provider.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios_flutter/src/constants/theme.dart';
+import 'package:patiprecios/src/constants/theme.dart';
 
 import 'home_page.dart';
 
