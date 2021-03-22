@@ -10,6 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:patiprecios/main.dart' as app2;
 
+
 void main() => run(_testMain);
 
 run(void Function() testMain) {}

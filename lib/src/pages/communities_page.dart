@@ -91,7 +91,9 @@ class ComunidadesPage extends StatelessWidget {
                                     color: Colors.white, fontSize: 14.0),
                               )),
                         ),
-                        onPressed: () {}));
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'community');
+                        }));
               },
               separatorBuilder: (context, index) => Divider(),
             ),

@@ -32,15 +32,48 @@ class CercaPage extends StatelessWidget {
                   child: Hero(
                     tag: '${item.toString()}',
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        print('click widget');
+                      },
                       child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: AssetImage(item),
-                              fit: BoxFit.cover,
-                            )),
-                      ),
+                          padding: EdgeInsets.only(left: 10.0),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: AssetImage(item),
+                                fit: BoxFit.cover,
+                              )),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text(
+                                'Nombre del producto',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '99.999',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  IconButton(
+                                      icon: Icon(
+                                        Icons.add,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {
+                                        print('click boton');
+                                      })
+                                ],
+                              )
+                            ],
+                          )),
                     ),
                   )))
               .toList(),

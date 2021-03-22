@@ -4,11 +4,13 @@ import 'package:patiprecios/src/pages/publication_page.dart';
 import 'package:patiprecios/src/pages/splashscreen_page.dart';
 import 'package:patiprecios/src/pages/welcome_page.dart';
 
+
 Map<String, WidgetBuilder> getApplicationRoutes() {
   return <String, WidgetBuilder>{
-    'splashscreen': (BuildContext context) => SplashScreenPage(),
+    'splashpage': (BuildContext context) => SplashScreenPage(),
     'welcome': (BuildContext context) => WelcomePage(),
     'home': (BuildContext context) => HomePage(),
     'publication': (BuildContext context) => PublicacionPage(),
+    'community': (BuildContext context) => CommunityPage(),
   };
 }
