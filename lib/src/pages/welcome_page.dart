@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
+import 'package:patiprecios/src/pages/login_page.dart';
 
 import 'home_page.dart';
 
@@ -68,7 +69,7 @@ class WelcomePage extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => LoginPage()));
                 })
           ],
         ),

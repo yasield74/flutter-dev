@@ -102,6 +102,9 @@ class CommunityPage extends StatelessWidget {
               color: PatiColors.primaryDark,
             ),
             onPressed: () {}),
+        SizedBox(
+          width: 20.0,
+        ),
         TextButton(
             onPressed: () {},
             child: Container(
@@ -117,6 +120,9 @@ class CommunityPage extends StatelessWidget {
                 ),
               ),
             )),
+        SizedBox(
+          width: 10.0,
+        ),
         IconButton(
             icon: Icon(
               Icons.share,

@@ -33,7 +33,7 @@ class CercaPage extends StatelessWidget {
                     tag: '${item.toString()}',
                     child: GestureDetector(
                       onTap: () {
-                        print('click widget');
+                        Navigator.pushNamed(context, 'publication');
                       },
                       child: Container(
                           padding: EdgeInsets.only(left: 10.0),

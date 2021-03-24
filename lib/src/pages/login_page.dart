@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: 50.0,
               ),
-              _formulario()
+              _formulario(context)
             ],
           ),
         ),
@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _formulario() {
+  Widget _formulario(BuildContext context) {
     return Column(
       children: [
         Stack(
@@ -145,7 +145,9 @@ class LoginPage extends StatelessWidget {
           height: 20.0,
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, 'home');
+            },
             child: Container(
               width: 400,
               padding: EdgeInsets.symmetric(vertical: 15.0),
@@ -170,11 +172,12 @@ class LoginPage extends StatelessWidget {
               value: false,
               onChanged: (valor) {},
             ),
-            Text('¿Olvidaste tu contraseña?')
+            Text('Recordar contraseña')
           ],
         ),
-        SizedBox(
-          height: 15.0,
+        TextButton(
+          onPressed: () {},
+          child: Text(' ¿Olvidaste tu contraseña?'),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -216,7 +219,9 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(fontSize: 13.0),
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, 'newaccount');
+                },
                 child: Text('Regístrate gratis aqui',
                     style: TextStyle(fontSize: 13.0)))
           ],

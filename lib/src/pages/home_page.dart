@@ -20,8 +20,14 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.only(left: 15.0),
           child: Row(
             children: [
-              CircleAvatar(
-                backgroundImage: AssetImage('assets/images/photo_female_1.jpg'),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'profile');
+                },
+                child: CircleAvatar(
+                  backgroundImage:
+                      AssetImage('assets/images/photo_female_1.jpg'),
+                ),
               ),
               SizedBox(
                 width: 10.0,

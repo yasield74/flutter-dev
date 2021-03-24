@@ -33,7 +33,7 @@ class NewAccountPageTwo extends StatelessWidget {
                   SizedBox(
                     height: 50.0,
                   ),
-                  _formulario()
+                  _formulario(context)
                 ],
               ),
             ),
@@ -71,7 +71,7 @@ class NewAccountPageTwo extends StatelessWidget {
     );
   }
 
-  Widget _formulario() {
+  Widget _formulario(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -195,7 +195,9 @@ class NewAccountPageTwo extends StatelessWidget {
           height: 20.0,
         ),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, 'home');
+            },
             child: Container(
               width: 400,
               padding: EdgeInsets.symmetric(vertical: 15.0),

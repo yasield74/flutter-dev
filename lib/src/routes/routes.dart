@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:patiprecios/src/pages/community_page.dart';
 import 'package:patiprecios/src/pages/home_page.dart';
 import 'package:patiprecios/src/pages/login_page.dart';
+import 'package:patiprecios/src/pages/new_publication_page.dart';
 import 'package:patiprecios/src/pages/newaccount_page.dart';
 import 'package:patiprecios/src/pages/newacctount_pagetwo.dart';
+import 'package:patiprecios/src/pages/profile_page.dart';
 
 import 'package:patiprecios/src/pages/publication_page.dart';
 import 'package:patiprecios/src/pages/splashscreen_page.dart';
@@ -19,5 +21,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'login': (BuildContext context) => LoginPage(),
     'newaccount': (BuildContext context) => NewAccountPageOne(),
     'newaccount2': (BuildContext context) => NewAccountPageTwo(),
+    'profile': (BuildContext context) => ProfilePage(),
+    'newpublication': (BuildContext context) => NewPublicationPage(),
   };
 }

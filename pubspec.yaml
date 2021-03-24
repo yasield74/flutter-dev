@@ -42,7 +42,7 @@ flutter:
     - assets/
 
 fonts:
-  - family: VarelaRound
+  - family: Varela Round
     fonts:
       - asset: assets/fonts/VarelaRound-Regular.ttf     
   - family: Montserrat 

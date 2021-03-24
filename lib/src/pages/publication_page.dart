@@ -13,6 +13,11 @@ class _PublicacionPageState extends State<PublicacionPage> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Stack(
         children: [
           _fondo(size),
@@ -154,7 +159,7 @@ class _PublicacionPageState extends State<PublicacionPage> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: Image(
-                      image: AssetImage('assets/images/photo_male_5.jpg'),
+                      image: AssetImage('assets/images/mapa.png'),
                     ),
                   )
                 ],
