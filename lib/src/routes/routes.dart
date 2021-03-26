@@ -10,6 +10,7 @@ import 'package:patiprecios/src/pages/profile_page.dart';
 import 'package:patiprecios/src/pages/publication_page.dart';
 import 'package:patiprecios/src/pages/splashscreen_page.dart';
 import 'package:patiprecios/src/pages/welcome_page.dart';
+import 'package:patiprecios/src/pages/new_community.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes() {
   return <String, WidgetBuilder>{
@@ -23,5 +24,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'newaccount2': (BuildContext context) => NewAccountPageTwo(),
     'profile': (BuildContext context) => ProfilePage(),
     'newpublication': (BuildContext context) => NewPublicationPage(),
+    'newcommunity': (BuildContext context) => NewCommunityPage(),
   };
 }

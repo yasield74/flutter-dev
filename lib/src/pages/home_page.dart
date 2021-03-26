@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patiprecios/src/pages/favorites_page.dart';
+
 import 'package:patiprecios/src/pages/communities_page.dart';
 import 'package:patiprecios/src/pages/location_page.dart';
 import 'package:patiprecios/src/pages/search_search.dart';
@@ -7,6 +7,8 @@ import 'package:patiprecios/src/pages/settings_page.dart';
 import 'package:patiprecios/src/providers/ui_provider.dart';
 import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 import 'package:provider/provider.dart';
+
+import 'new_publication_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -76,7 +78,7 @@ class _HomePageBody extends StatelessWidget {
         return SearchFragment();
         break;
       case 2:
-        return FavoritesPage();
+        return NewPublicationPage();
         break;
       case 3:
         return ComunidadesPage();
