@@ -28,7 +28,14 @@ class MyApp extends StatelessWidget {
                     headline6: TextStyle(
                         color: Colors.grey,
                         fontSize: 25.0,
-                        fontWeight: FontWeight.bold)))),
+                        fontWeight: FontWeight.bold))),
+            textTheme: TextTheme(
+                headline1: TextStyle(fontSize: 35, color: Colors.black),
+                headline2: TextStyle(fontSize: 30, color: Colors.black),
+                headline3: TextStyle(fontSize: 25, color: Colors.black),
+                headline4: TextStyle(fontSize: 21, color: Colors.black),
+                headline5: TextStyle(fontSize: 18, color: Colors.black),
+                headline6: TextStyle(fontSize: 12, color: Colors.black))),
       ),
     );
   }

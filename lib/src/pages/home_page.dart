@@ -34,7 +34,9 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 width: 10.0,
               ),
-              Text('Hola')
+              Text(
+                'Hola',
+              )
             ],
           ),
         ),
