@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:patiprecios/src/pages/advanced_search_page.dart';
 import 'package:patiprecios/src/pages/community_page.dart';
 import 'package:patiprecios/src/pages/home_page.dart';
 import 'package:patiprecios/src/pages/login_page.dart';
@@ -25,5 +26,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'profile': (BuildContext context) => ProfilePage(),
     'newpublication': (BuildContext context) => NewPublicationPage(),
     'newcommunity': (BuildContext context) => NewCommunityPage(),
+    'advancedsearch': (BuildContext context) => AdvancedSearchPage(),
   };
 }

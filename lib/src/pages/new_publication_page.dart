@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
 
+import 'package:patiprecios/src/widget/input_widget.dart';
+import 'package:patiprecios/src/widget/custom_button_widget.dart';
+
 class NewPublicationPage extends StatefulWidget {
   NewPublicationPage({Key key}) : super(key: key);
 
@@ -65,109 +68,45 @@ class _NewPublicationPageState extends State<NewPublicationPage> {
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Título',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Titulo',
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Precio',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Precio',
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Categoría',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Categoría',
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Nuevo/Usado',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Nuevo/Usado',
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Ubicación',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Ubicación',
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  keyboardType: TextInputType.multiline,
+                Input(
+                  hintText: 'Descripción',
                   maxLines: 6,
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Descripción',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
                 ),
                 SizedBox(
                   height: 20.0,
                 ),
-                TextField(
-                  textAlign: TextAlign.start,
-                  decoration: InputDecoration(
-                    hintText: 'Tags',
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide(width: 1, color: Colors.grey),
-                    ),
-                    contentPadding: EdgeInsets.all(16),
-                  ),
+                Input(
+                  hintText: 'Tags',
                 ),
                 SizedBox(
                   height: 20.0,
@@ -176,21 +115,15 @@ class _NewPublicationPageState extends State<NewPublicationPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: TextButton(
-                          onPressed: () {},
-                          child: Container(
-                            width: double.infinity,
-                            padding: EdgeInsets.all(15.0),
-                            child: Text(
-                              'SIGUIENTE',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 25.0),
-                            ),
-                            decoration: BoxDecoration(
-                                color: PatiColors.accentDark,
-                                borderRadius: BorderRadius.circular(30.0)),
-                          )),
+                      child: CustonButton(
+                        title: 'SIGUIENTE',
+                        buttonColor: PatiColors.accentDark,
+                        textColor: Colors.white,
+                        elevation: 0,
+                        onPressed: () {
+                          print('click');
+                        },
+                      ),
                     ),
                   ],
                 )

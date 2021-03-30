@@ -39,7 +39,7 @@ class Input extends StatelessWidget {
         hintStyle: TextStyle(fontSize: 16),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide(width: 1, color: Colors.grey),
+          borderSide: BorderSide(width: 1, color: borderColor),
         ),
         contentPadding: EdgeInsets.all(16),
       ),

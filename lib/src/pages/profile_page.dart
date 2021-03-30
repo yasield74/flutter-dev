@@ -23,6 +23,7 @@ class _ProfilePageState extends State<ProfilePage>
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -37,7 +38,6 @@ class _ProfilePageState extends State<ProfilePage>
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 

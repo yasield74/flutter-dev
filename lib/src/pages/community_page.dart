@@ -10,6 +10,7 @@ class CommunityPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: true,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: PatiColors.primaryDark,
         elevation: 0,
@@ -21,7 +22,6 @@ class CommunityPage extends StatelessWidget {
           _avatar(context, size)
         ],
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 

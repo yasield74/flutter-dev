@@ -24,36 +24,37 @@ class _MyAppState extends State<LocationFragment>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         body: Container(
-      color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TabBar(
-            unselectedLabelColor: Colors.black,
-            labelColor: Colors.black,
-            tabs: [
-              Tab(
-                text: 'CERCA DE TI',
+          color: Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              TabBar(
+                unselectedLabelColor: Colors.black,
+                labelColor: Colors.black,
+                tabs: [
+                  Tab(
+                    text: 'CERCA DE TI',
+                  ),
+                  Tab(
+                    text: 'SUGERENCIAS',
+                  ),
+                  Tab(
+                    text: 'LO MÁS VENDIDO',
+                  )
+                ],
+                controller: _tabController,
+                indicatorSize: TabBarIndicatorSize.tab,
               ),
-              Tab(
-                text: 'SUGERENCIAS',
+              Expanded(
+                child: TabBarView(
+                  children: [CercaPage(), SugerenciasPage(), MasVendidosPage()],
+                  controller: _tabController,
+                ),
               ),
-              Tab(
-                text: 'LO MÁS VENDIDO',
-              )
             ],
-            controller: _tabController,
-            indicatorSize: TabBarIndicatorSize.tab,
           ),
-          Expanded(
-            child: TabBarView(
-              children: [CercaPage(), SugerenciasPage(), MasVendidosPage()],
-              controller: _tabController,
-            ),
-          ),
-        ],
-      ),
-    ));
+        ));
   }
 }

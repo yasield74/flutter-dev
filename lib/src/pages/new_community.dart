@@ -14,6 +14,7 @@ class _NewCommunityPageState extends State<NewCommunityPage> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: PatiColors.primaryDark,
