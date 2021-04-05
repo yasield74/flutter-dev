@@ -46,7 +46,7 @@ class NewAccountPageTwo extends StatelessWidget {
       children: [
         Image(
           image: AssetImage(
-            'assets/patiprecios_icon_only.jpg',
+            'assets/images/patiprecios_icon_only.jpg',
           ),
           height: 150.0,
           width: 150.0,

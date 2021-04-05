@@ -25,7 +25,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             label: 'Otro',
             icon: Image(
               height: 35.0,
-              image: AssetImage('assets/patiprecios_icon_only.jpg'),
+              image: AssetImage('assets/images/isotype_color.png'),
             )),
         BottomNavigationBarItem(label: 'Comunidad', icon: Icon(Icons.group)),
         BottomNavigationBarItem(

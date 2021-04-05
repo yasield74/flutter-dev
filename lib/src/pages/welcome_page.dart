@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
 import 'package:patiprecios/src/pages/login_page.dart';
 
-import 'home_page.dart';
-
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key key}) : super(key: key);
 
@@ -37,7 +35,7 @@ class WelcomePage extends StatelessWidget {
             Container(
                 width: 320.0,
                 height: 320.0,
-                child: Image(image: AssetImage('assets/patiprecios_icon.jpg'))),
+                child: Image(image: AssetImage('assets/images/logo-1.png'))),
             SizedBox(
               height: 20.0,
             ),
