@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
-import 'package:patiprecios/src/pages/login_page.dart';
+import 'package:patiprecios/src/pages/login/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key key}) : super(key: key);

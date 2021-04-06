@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:patiprecios/src/pages/communities_page.dart';
+import 'package:patiprecios/src/pages/community/communities_page.dart';
 import 'package:patiprecios/src/pages/location_page.dart';
-import 'package:patiprecios/src/pages/search_page.dart';
+import 'package:patiprecios/src/pages/search/search_page.dart';
 import 'package:patiprecios/src/pages/settings_page.dart';
 import 'package:patiprecios/src/providers/ui_provider.dart';
 import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';

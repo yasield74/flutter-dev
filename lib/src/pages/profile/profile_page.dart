@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
-import 'package:patiprecios/src/pages/user_publications_page.dart';
-import 'package:patiprecios/src/pages/user_purchases_page.dart';
+import 'package:patiprecios/src/pages/profile/user_publications_page.dart';
+import 'package:patiprecios/src/pages/profile/user_purchases_page.dart';
 import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 
 class ProfilePage extends StatefulWidget {
