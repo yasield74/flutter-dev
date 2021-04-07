@@ -12,6 +12,7 @@ import 'package:patiprecios/src/pages/new_publication_page.dart';
 import 'package:patiprecios/src/pages/login/newaccount_page.dart';
 import 'package:patiprecios/src/pages/login/newacctount_pagetwo.dart';
 import 'package:patiprecios/src/pages/profile/profile_page.dart';
+import 'package:patiprecios/src/pages/profile/followers_list_page.dart';
 
 import 'package:patiprecios/src/pages/publication_page.dart';
 import 'package:patiprecios/src/pages/splashscreen_page.dart';
@@ -36,6 +37,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'communitymembers': (BuildContext context) => CommunityMembersPage(),
     'rememberpassword': (BuildContext context) => RememberPasswordPage(),
     'changepassword': (BuildContext context) => ChangePasswordPage(),
+    'followerslist': (BuildContext context) => FollowersListPage(),
     'changepasswordconfirmation': (BuildContext context) =>
         ChangePasswordConfirmationPage(),
   };

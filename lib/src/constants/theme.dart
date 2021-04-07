@@ -5,7 +5,7 @@ class PatiColors {
 
   static const Color red = Color.fromRGBO(255, 0, 98, 1);
 
-  static const Color aqua = Color.fromRGBO(104, 82, 0, 1);
+  static const Color aqua = Color.fromRGBO(104, 82, 230, 1);
 
   static const Color darkBlue = Color.fromRGBO(32, 32, 96, 1);
 

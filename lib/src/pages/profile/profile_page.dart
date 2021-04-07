@@ -106,14 +106,26 @@ class _ProfilePageState extends State<ProfilePage>
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Column(
-          children: [
-            Text(
-              '300',
-              style: TextStyle(fontSize: 35),
-            ),
-            Text('Seguidores')
-          ],
+        TextButton(
+          onPressed: () {
+            Navigator.pushNamed(context, 'followerslist');
+          },
+          child: Column(
+            children: [
+              Text(
+                '300',
+                style: Theme.of(context).textTheme.headline1.copyWith(
+                      color: Colors.black,
+                    ),
+              ),
+              Text(
+                'Seguidores',
+                style: Theme.of(context).textTheme.headline6.copyWith(
+                      color: Colors.black,
+                    ),
+              )
+            ],
+          ),
         ),
         Container(
           color: Colors.black,
