@@ -57,7 +57,7 @@ class CommunityPage extends StatelessWidget {
                       SizedBox(height: 20.0),
                       _actionButtons(),
                       SizedBox(height: 20.0),
-                      _communityInfo(),
+                      _communityInfo(context),
                       SizedBox(height: 20.0),
                       _communityText()
                     ],
@@ -142,35 +142,46 @@ class CommunityPage extends StatelessWidget {
     );
   }
 
-  Widget _communityInfo() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          children: [
-            Text(
-              '500',
-              style: TextStyle(fontSize: 35),
-            ),
-            Text('Miembros')
-          ],
-        ),
-        Container(
-          color: Colors.black,
-          margin: EdgeInsets.only(left: 20.0, right: 20.0),
-          width: 2.0,
-          height: 65.0,
-        ),
-        Column(
-          children: [
-            Text(
-              '500',
-              style: TextStyle(fontSize: 35),
-            ),
-            Text('Miembros')
-          ],
-        ),
-      ],
+  Widget _communityInfo(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        Navigator.pushNamed(context, 'communitymembers');
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            children: [
+              Text(
+                '500',
+                style: TextStyle(fontSize: 35, color: Colors.black),
+              ),
+              Text(
+                'Miembros',
+                style: TextStyle(color: Colors.black),
+              )
+            ],
+          ),
+          Container(
+            color: Colors.black,
+            margin: EdgeInsets.only(left: 20.0, right: 20.0),
+            width: 2.0,
+            height: 65.0,
+          ),
+          Column(
+            children: [
+              Text(
+                '500',
+                style: TextStyle(fontSize: 35, color: Colors.black),
+              ),
+              Text(
+                'Miembros',
+                style: TextStyle(color: Colors.black),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 
