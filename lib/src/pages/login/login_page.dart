@@ -176,7 +176,9 @@ class LoginPage extends StatelessWidget {
           ],
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'rememberpassword');
+          },
           child: Text(' ¿Olvidaste tu contraseña?'),
         ),
         Row(

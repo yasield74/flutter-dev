@@ -1,4 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:patiprecios/src/pages/login/change_password_confirmation_page.dart';
+import 'package:patiprecios/src/pages/login/change_password_page.dart';
+import 'package:patiprecios/src/pages/login/remember_password_page.dart';
 import 'package:patiprecios/src/pages/search/advanced_search_page.dart';
 import 'package:patiprecios/src/pages/comments_page.dart';
 import 'package:patiprecios/src/pages/community/community_members_page.dart';
@@ -31,5 +34,9 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'advancedsearch': (BuildContext context) => AdvancedSearchPage(),
     'comments': (BuildContext context) => CommentsPage(),
     'communitymembers': (BuildContext context) => CommunityMembersPage(),
+    'rememberpassword': (BuildContext context) => RememberPasswordPage(),
+    'changepassword': (BuildContext context) => ChangePasswordPage(),
+    'changepasswordconfirmation': (BuildContext context) =>
+        ChangePasswordConfirmationPage(),
   };
 }
