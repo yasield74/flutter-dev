@@ -115,7 +115,7 @@ class _NewPublicationPageState extends State<NewPublicationPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: CustonButton(
+                      child: CustomButton(
                         title: 'SIGUIENTE',
                         buttonColor: PatiColors.accentDark,
                         textColor: Colors.white,

@@ -26,7 +26,7 @@ class _ProfilePageState extends State<ProfilePage>
       backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: PatiColors.primaryDark,
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -34,7 +34,6 @@ class _ProfilePageState extends State<ProfilePage>
           children: [
             background(context, size),
             _content(context, size),
-            _avatar(context, size),
           ],
         ),
       ),
@@ -50,41 +49,52 @@ class _ProfilePageState extends State<ProfilePage>
   }
 
   Widget _content(BuildContext context, Size size) {
-    return Positioned(
-        top: 150,
-        child: Container(
-          width: size.width,
-          height: size.height - 150,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0))),
-          child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SafeArea(
             child: Container(
-              padding: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
-              child: Column(
-                children: [
-                  _userInfo(),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  _actionButtons(),
-                  SizedBox(
-                    height: 15.0,
-                  ),
-                  _communityInfo(),
-                  _tabs(),
-                ],
-              ),
+              height: 20.0,
             ),
           ),
-        ));
+          Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 50.0),
+                width: size.width,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0))),
+                child: Container(
+                  padding: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
+                  child: Column(
+                    children: [
+                      _userInfo(),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      _actionButtons(),
+                      SizedBox(
+                        height: 15.0,
+                      ),
+                      _communityInfo(),
+                      _tabs(),
+                    ],
+                  ),
+                ),
+              ),
+              _avatar(context, size),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _avatar(BuildContext context, Size size) {
     return Positioned(
-        top: 100,
         left: size.width / 2 - 50,
         child: CircleAvatar(
           backgroundImage: AssetImage('assets/images/photo_male_5.jpg'),

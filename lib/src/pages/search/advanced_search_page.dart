@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/widget/input_widget.dart';
 
-import '../nearby_page.dart';
+import '../home/nearby_page.dart';
 
 class AdvancedSearchPage extends StatefulWidget {
   const AdvancedSearchPage({Key key}) : super(key: key);

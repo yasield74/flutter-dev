@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustonButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final String title;
   final Color buttonColor;
   final Color textColor;
   final Function onPressed;
   final double elevation;
 
-  CustonButton(
+  CustomButton(
       {this.title = "",
       this.buttonColor,
       this.textColor,

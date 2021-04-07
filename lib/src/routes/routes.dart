@@ -6,7 +6,7 @@ import 'package:patiprecios/src/pages/search/advanced_search_page.dart';
 import 'package:patiprecios/src/pages/comments_page.dart';
 import 'package:patiprecios/src/pages/community/community_members_page.dart';
 import 'package:patiprecios/src/pages/community/community_page.dart';
-import 'package:patiprecios/src/pages/home_page.dart';
+import 'package:patiprecios/src/pages/home/home_page.dart';
 import 'package:patiprecios/src/pages/login/login_page.dart';
 import 'package:patiprecios/src/pages/new_publication_page.dart';
 import 'package:patiprecios/src/pages/login/newaccount_page.dart';

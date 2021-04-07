@@ -92,7 +92,7 @@ class RememberPasswordPage extends StatelessWidget {
                   child: Row(
                     children: [
                       Expanded(
-                        child: CustonButton(
+                        child: CustomButton(
                           title: 'SIGUIENTE',
                           buttonColor: PatiColors.darkBlue,
                           onPressed: () {

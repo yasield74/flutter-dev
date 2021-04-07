@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
-import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 
 class NewCommunityPage extends StatefulWidget {
   @override
@@ -26,7 +25,6 @@ class _NewCommunityPageState extends State<NewCommunityPage> {
           _content(context, size),
         ],
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 
@@ -39,17 +37,20 @@ class _NewCommunityPageState extends State<NewCommunityPage> {
   }
 
   Widget _content(BuildContext context, Size size) {
-    return Positioned(
-        top: 150,
-        child: Container(
-          width: size.width,
-          height: size.height - 150,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0))),
-          child: SingleChildScrollView(
+    return SingleChildScrollView(
+        child: Column(
+      children: [
+        SafeArea(
+            child: Container(
+          height: 20.0,
+        )),
+        Container(
+            width: size.width,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0))),
             child: Container(
               padding: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
               child: Column(
@@ -189,8 +190,8 @@ class _NewCommunityPageState extends State<NewCommunityPage> {
                   ),
                 ],
               ),
-            ),
-          ),
-        ));
+            ))
+      ],
+    ));
   }
 }

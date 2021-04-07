@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patiprecios/src/widget/custom_button_widget.dart';
 
 class ComunidadesPage extends StatelessWidget {
   const ComunidadesPage({Key key}) : super(key: key);
@@ -97,6 +98,16 @@ class ComunidadesPage extends StatelessWidget {
               },
               separatorBuilder: (context, index) => Divider(),
             ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          CustomButton(
+            title: 'CREAR COMUNIDAD',
+            buttonColor: Colors.blueAccent,
+            onPressed: () {
+              Navigator.pushNamed(context, 'newcommunity');
+            },
           )
         ],
       ),

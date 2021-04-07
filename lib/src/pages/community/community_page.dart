@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:patiprecios/src/constants/theme.dart';
-import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 
 class CommunityPage extends StatelessWidget {
   const CommunityPage({Key key}) : super(key: key);
@@ -19,7 +18,6 @@ class CommunityPage extends StatelessWidget {
         children: [
           background(context, size),
           _content(context, size),
-          _avatar(context, size)
         ],
       ),
     );
@@ -34,38 +32,48 @@ class CommunityPage extends StatelessWidget {
   }
 
   Widget _content(BuildContext context, Size size) {
-    return Positioned(
-        top: 150,
-        child: Container(
-          width: size.width,
-          height: size.height - 150,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30.0),
-                  topRight: Radius.circular(30.0))),
-          child: SingleChildScrollView(
-            child: Container(
-              padding: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
-              child: Column(
-                children: [
-                  _communityTitle(),
-                  SizedBox(height: 20.0),
-                  _actionButtons(),
-                  SizedBox(height: 20.0),
-                  _communityInfo(),
-                  SizedBox(height: 20.0),
-                  _communityText()
-                ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SafeArea(
+              child: Container(
+            height: 50.0,
+          )),
+          Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 50.0),
+                width: size.width,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0))),
+                child: Container(
+                  padding: EdgeInsets.only(top: 70.0, left: 20.0, right: 20.0),
+                  child: Column(
+                    children: [
+                      _communityTitle(),
+                      SizedBox(height: 20.0),
+                      _actionButtons(),
+                      SizedBox(height: 20.0),
+                      _communityInfo(),
+                      SizedBox(height: 20.0),
+                      _communityText()
+                    ],
+                  ),
+                ),
               ),
-            ),
+              _avatar(context, size)
+            ],
           ),
-        ));
+        ],
+      ),
+    );
   }
 
   Widget _avatar(BuildContext context, Size size) {
     return Positioned(
-        top: 100,
         left: size.width / 2 - 50,
         child: CircleAvatar(
           backgroundImage: AssetImage('assets/images/image_2.jpg'),
