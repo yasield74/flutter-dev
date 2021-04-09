@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patiprecios/src/constants/theme.dart';
 import 'package:patiprecios/src/widget/bottom_navigation_widget.dart';
 
 class PublicacionPage extends StatefulWidget {
@@ -173,50 +174,134 @@ class _PublicacionPageState extends State<PublicacionPage> {
       children: [
         Row(
           children: [
-            _iconSet(Icons.favorite, Colors.red, 100),
+            _iconSet(Icons.favorite, Colors.red, 100, () {}),
             SizedBox(
               width: 10.0,
             ),
-            _iconSet(Icons.stars, Colors.yellow, 100),
+            _iconSet(Icons.stars, Colors.yellow, 100, () {}),
             SizedBox(
               width: 10.0,
             ),
-            _iconSet(Icons.stars, Colors.yellow, 100),
+            _iconSet(Icons.stars, Colors.yellow, 100, () {}),
             SizedBox(
               width: 10.0,
             ),
-            _iconSet(Icons.stars, Colors.yellow, 100),
+            _iconSet(Icons.stars, Colors.yellow, 100, () {}),
             SizedBox(
               width: 10.0,
             ),
-            _iconSet(Icons.thumb_down, Colors.brown, 100),
+            _iconSet(Icons.thumb_down, Colors.brown, 100, () {}),
           ],
         ),
         Row(
           children: [
-            _iconSet(Icons.speaker_notes, Colors.blue, 100),
+            IconButton(
+                icon: Icon(
+                  Icons.speaker_notes,
+                  color: PatiColors.aqua,
+                  size: 35.0,
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'comments');
+                }),
             SizedBox(
               width: 10.0,
             ),
-            _iconSet(Icons.send, Colors.orange, 100),
+            IconButton(
+                icon: Icon(
+                  Icons.send,
+                  color: PatiColors.orange,
+                  size: 35.0,
+                ),
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (_) => _shareDialog(),
+                      barrierDismissible: true);
+                }),
           ],
         )
       ],
     );
   }
 
-  Widget _iconSet(IconData icon, Color color, int value) {
-    return Column(
-      children: [
-        Icon(
-          icon,
-          color: color,
+  Widget _shareDialog() {
+    return AlertDialog(
+      backgroundColor: Colors.transparent,
+      content: Container(
+        padding: EdgeInsets.all(20.0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0), color: Colors.white),
+        height: 250.0,
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.send,
+                  color: PatiColors.orange,
+                ),
+                SizedBox(
+                  width: 5.0,
+                ),
+                Text('Compartir en')
+              ],
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Comunidades',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline4
+                      .copyWith(color: Colors.grey[600]),
+                )),
+            Divider(),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'Contactos',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    .copyWith(color: Colors.grey[600]),
+              ),
+            ),
+            Divider(),
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Whatsapp',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline4
+                      .copyWith(color: Colors.grey[600]),
+                )),
+          ],
         ),
-        SizedBox(
-          height: 10.0,
-        ),
-        Text('$value'),
-      ],
+      ),
+    );
+  }
+
+  Widget _iconSet(IconData icon, Color color, int value, Function onTab) {
+    return GestureDetector(
+      onTap: onTab,
+      child: Column(
+        children: [
+          Icon(
+            icon,
+            color: color,
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text('$value'),
+        ],
+      ),
     );
   }
 }
